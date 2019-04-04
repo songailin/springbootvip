@@ -29,16 +29,16 @@ public class UserController {
     public String register(String username,String passwd) {
         boolean login = userService.register(username, passwd);
         if(login) {
-            return "注册成功";
+            return "注册成功。";
         }else {
-            return  "注册失败";
+            return  "注册失败。";
         }
     }
 
     @RequestMapping("/batchAdd")
     public String batchAdd(String username,String passwd) {
         userService.batchAdd(username, passwd);
-        return "成功";
+        return "批量添加用户成功。";
     }
 
 
